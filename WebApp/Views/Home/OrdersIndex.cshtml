@@ -1,0 +1,43 @@
+﻿@model IEnumerable<ModelsClassLibrary.Entitys.Order>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Заказы</title>
+</head>
+<body>
+    <h3>Все заказы компании @ViewBag.CompanyName</h3>
+
+    <table>
+        <tr>
+            <td>Маршрут</td>
+            <td>Состояние</td>
+            <td>Дата</td>
+            <td>Номер автомобиля</td>
+        </tr>
+        @foreach (var order in Model){
+            <tr>
+                <td align="center">@order.Route</td>
+                @{ 
+                    string complite = "";
+                    if (order.IsComplite)
+                        complite = "complite";
+                    else
+                        complite = "in progress";
+                }
+                <td align="center">@complite</td>
+                <td align="center">@order.Date</td>
+                <td align="center">@order.VehicleId</td>
+                <td><a href="~/Home/EditIndex?id=@order.Id&company=@ViewBag.CompanyId">изменить</a></td>
+                <td><a href="~/Home/Delete/@order.Id">удалить</a></td>
+            </tr>
+        }
+        <tr>
+            <td><a href="~/Home/AddIndex?companyId=@ViewBag.CompanyId">добавить</a></td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,11 @@
+C:\Users\Valerik\source\repos\MyGazpromTask\ModelsClassLibrary\bin\Debug\net5.0\ModelsClassLibrary.deps.json
+C:\Users\Valerik\source\repos\MyGazpromTask\ModelsClassLibrary\bin\Debug\net5.0\ModelsClassLibrary.dll
+C:\Users\Valerik\source\repos\MyGazpromTask\ModelsClassLibrary\bin\Debug\net5.0\ref\ModelsClassLibrary.dll
+C:\Users\Valerik\source\repos\MyGazpromTask\ModelsClassLibrary\bin\Debug\net5.0\ModelsClassLibrary.pdb
+C:\Users\Valerik\source\repos\MyGazpromTask\ModelsClassLibrary\obj\Debug\net5.0\ModelsClassLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Valerik\source\repos\MyGazpromTask\ModelsClassLibrary\obj\Debug\net5.0\ModelsClassLibrary.AssemblyInfoInputs.cache
+C:\Users\Valerik\source\repos\MyGazpromTask\ModelsClassLibrary\obj\Debug\net5.0\ModelsClassLibrary.AssemblyInfo.cs
+C:\Users\Valerik\source\repos\MyGazpromTask\ModelsClassLibrary\obj\Debug\net5.0\ModelsClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Valerik\source\repos\MyGazpromTask\ModelsClassLibrary\obj\Debug\net5.0\ModelsClassLibrary.dll
+C:\Users\Valerik\source\repos\MyGazpromTask\ModelsClassLibrary\obj\Debug\net5.0\ref\ModelsClassLibrary.dll
+C:\Users\Valerik\source\repos\MyGazpromTask\ModelsClassLibrary\obj\Debug\net5.0\ModelsClassLibrary.pdb

@@ -1,0 +1,52 @@
+﻿@using ModelsClassLibrary.Entitys
+
+@model Vehicle
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Новый автомобиль</title>
+</head>
+<body>
+    <div>
+        <h3>Форма оформления</h3>
+        <p>Для регистрации автомобиля заполните следующие поля:</p>
+
+        <form method="post">
+            <table>
+                <tr>
+                    <td>Марка:</td>
+                    <td><input type="text" name="brand" /></td>
+                </tr>
+
+                <tr>
+                    <td>Статус: свободен\на заказе</td>
+                    <td><input type="checkbox" name="istransit" value="true" /></td>
+                </tr>
+
+                <tr>
+                    <td>Пробег:</td>
+                    <td><input type="text" name="mileage" /></td>
+                </tr>
+
+                <tr>
+                    <td>Номер компании:</td>
+                    <td>
+                        <select name="vehiclescompanyId">
+                            @foreach (var company in ViewBag.Companys)
+                            {
+                                <option value="@company.Id">Компания№@company.Id</option>
+                            }
+                        </select>
+                    </td>
+                </tr>
+
+                <tr><td><input type="submit" value="Отправить" /> </td><td></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

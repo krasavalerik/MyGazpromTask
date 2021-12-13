@@ -1,0 +1,47 @@
+﻿@using ModelsClassLibrary.Entitys
+
+@model Vehicle
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Новый заказа</title>
+</head>
+<body>
+    <div>
+        <h3>Форма оформления заказа</h3>
+        <p>Для оформления заказа заполните следующие поля:</p>
+
+        <form method="post">
+            <table>
+                <tr>
+                    <td>Маршрут:</td>
+                    <td><input type="text" name="Route"/></td>
+                </tr>
+
+                <tr>
+                    <td>Статус выполнения:</td>
+                    <td><input type="checkbox" name="iscomplite" value="true"/></td>
+                </tr>
+
+                <tr>
+                    <td>Доступные автомобили:</td>
+                    <td>
+                        <select name="vehicleid">
+                            @foreach (var vehicle in ViewBag.Vehicles)
+                            {
+                                <option value="@vehicle.Id">Автомобиль№@vehicle.Id</option>
+                            }
+                        </select>
+                    </td>
+                </tr>
+
+                <tr><td><input type="submit" value="Отправить" /> </td><td></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

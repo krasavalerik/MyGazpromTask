@@ -1,0 +1,40 @@
+﻿@using ModelsClassLibrary.Entitys
+@using WebApp.ViewModel
+
+@model CompanysWithVehicles
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form>
+    <label>Выберите компанию:</label>
+    <select name="id" class="form-control">
+        @foreach (VehiclesCompany comp in Model.VehiclesCompanies)
+        {
+            <option value="@comp.Id">@comp.Name</option>
+        }
+    </select>
+    <input type="submit" value="Применить фильтр"/>
+</form>
+
+<br />
+<table>
+    <tr>
+        <td>Марка автомобиля</td>
+        <td>Название компании</td>
+        <td>Пробег</td>
+    </tr>
+    @foreach (Vehicle vehicle in Model.Vehicles)
+    {
+        <tr>
+            <td align="center">@vehicle.Brand</td>
+            <td align="center">@vehicle.VehiclesCompany?.Name</td>
+            <td align="center">@vehicle.Mileage км</td>
+            <td align="center"><a href="~/Home/DeleteVehicle/@vehicle.Id">Удалить</a></td>
+        </tr>
+    }
+</table>
+
+<tr><td><a href="~/Home/AddVehicleIndex">Добавить авто</a></td></tr>
+<br />
+<tr><td><a href="~/Home/index">Главная</a></td></tr>
