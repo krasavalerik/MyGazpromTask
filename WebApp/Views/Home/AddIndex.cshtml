@@ -1,17 +1,4 @@
-﻿@using ModelsClassLibrary.Entitys
-
-@model Vehicle
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Новый заказа</title>
-</head>
-<body>
-    <div>
+﻿    <div>
         <h3>Форма оформления заказа</h3>
         <p>Для оформления заказа заполните следующие поля:</p>
 
@@ -31,8 +18,7 @@
                     <td>Доступные автомобили:</td>
                     <td>
                         <select name="vehicleid">
-                            @foreach (var vehicle in ViewBag.Vehicles)
-                            {
+                            @foreach (var vehicle in Model){
                                 <option value="@vehicle.Id">Автомобиль№@vehicle.Id</option>
                             }
                         </select>
@@ -43,5 +29,3 @@
             </table>
         </form>
     </div>
-</body>
-</html>

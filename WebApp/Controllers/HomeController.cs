@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+
 using ModelsClassLibrary.UnitOfWork;
 using ModelsClassLibrary.Entitys;
 using WebApp.ViewModel;
@@ -21,18 +21,24 @@ namespace WebApp.Controllers
         }
 
         public IActionResult Index(){
-            return View(_unitOfWork.VehiclesCompanys.GetAll());
+            ViewBag.Title = "Транспортные компании";
+            var companys = _unitOfWork.VehiclesCompanys.GetAll();
+
+            return View(companys);
         }
 
         public IActionResult OrdersIndex(int id){
+            ViewBag.Title = "Заказы";
             ViewBag.CompanyId = id;
             ViewBag.CompanyName = _unitOfWork.VehiclesCompanys.Get(id).Name;
+            var companyOrders = _unitOfWork.VehiclesCompanys.GetCompanyOrders(id);
 
-            return View(_unitOfWork.VehiclesCompanys.GetCompanyOrders(id));
+            return View(companyOrders);
         }
 
         public IActionResult VehiclesIndex(int? id){
 
+            ViewBag.Title = "Автопарк";
             _vehiclesCompanyList = _unitOfWork.VehiclesCompanys.GetAll().ToList();
             _vehiclesCompanyList.Insert(0, new VehiclesCompany { Id = 0, Name = "all" });
             _vehiclesList = _unitOfWork.Vehicles.GetAll().ToList();
@@ -49,11 +55,12 @@ namespace WebApp.Controllers
         }
 
         public IActionResult EditIndex(int id, int company){
-            var order = _unitOfWork.Orders.Get(id);
-            List<Vehicle> vehiclesLits = _unitOfWork.Vehicles.Find(c => c.VehiclesCompanyId == company).ToList();
-            ViewBag.Vehicles = vehiclesLits;
+            ViewBag.ComanyId = company;
+            var editModel = new EditModel();
+            editModel.Order = _unitOfWork.Orders.Get(id);
+            editModel.Vehicles = _unitOfWork.Vehicles.Find(c => c.VehiclesCompanyId == company).ToList();
 
-            return View(order);
+            return View(editModel);
         }
 
         [HttpPost]
@@ -67,9 +74,10 @@ namespace WebApp.Controllers
         }
 
         public IActionResult AddIndex(int companyId){
-            ViewBag.Vehicles = _unitOfWork.Vehicles.Find(c => c.VehiclesCompanyId == companyId).ToList();
+            ViewBag.Title = "Новый заказ";
+            var vehicles = _unitOfWork.Vehicles.Find(c => c.VehiclesCompanyId == companyId).ToList();
 
-            return View();
+            return View(vehicles);
         }
 
         [HttpPost]
@@ -83,9 +91,10 @@ namespace WebApp.Controllers
         }
 
         public IActionResult AddVehicleIndex(){
-            ViewBag.Companys = _unitOfWork.VehiclesCompanys.GetAll().ToList();
+            ViewBag.Title = "Новый автомобиль";
+            var companys = _unitOfWork.VehiclesCompanys.GetAll().ToList();
 
-            return View();
+            return View(companys);
         }
 
         [HttpPost]

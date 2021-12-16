@@ -1,15 +1,4 @@
-﻿@model IEnumerable<ModelsClassLibrary.Entitys.Order>
-@{
-    Layout = null;
-}
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title>Заказы</title>
-</head>
-<body>
-    <h3>Все заказы компании @ViewBag.CompanyName</h3>
+﻿    <h3>Все заказы компании @ViewBag.CompanyName</h3>
 
     <table>
         <tr>
@@ -39,5 +28,3 @@
             <td><a href="~/Home/AddIndex?companyId=@ViewBag.CompanyId">добавить</a></td>
         </tr>
     </table>
-</body>
-</html>

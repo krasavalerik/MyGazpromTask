@@ -61,6 +61,9 @@ C:\Users\Valerik\source\repos\MyGazpromTask\WebApp\obj\Debug\net5.0\Razor\Views\
 C:\Users\Valerik\source\repos\MyGazpromTask\WebApp\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Valerik\source\repos\MyGazpromTask\WebApp\obj\Debug\net5.0\Razor\Views\Home\OrdersIndex.cshtml.g.cs
 C:\Users\Valerik\source\repos\MyGazpromTask\WebApp\obj\Debug\net5.0\Razor\Views\Home\VehiclesIndex.cshtml.g.cs
+C:\Users\Valerik\source\repos\MyGazpromTask\WebApp\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Valerik\source\repos\MyGazpromTask\WebApp\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Valerik\source\repos\MyGazpromTask\WebApp\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\Valerik\source\repos\MyGazpromTask\WebApp\obj\Debug\net5.0\WebApp.RazorTargetAssemblyInfo.cache
 C:\Users\Valerik\source\repos\MyGazpromTask\WebApp\obj\Debug\net5.0\WebApp.RazorTargetAssemblyInfo.cs
 C:\Users\Valerik\source\repos\MyGazpromTask\WebApp\obj\Debug\net5.0\WebApp.Views.pdb

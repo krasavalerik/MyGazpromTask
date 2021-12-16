@@ -1,32 +1,18 @@
-﻿@model IEnumerable<ModelsClassLibrary.Entitys.VehiclesCompany>
-@{
-    Layout = null;
-}
-<!DOCTYPE html>
- 
-<html>
-<head>
-    <title>Транспортные компании</title>
-</head>
-<body>
-    <h3>Компании</h3>
-    <table class="table">
+﻿<h3>Компании</h3>
+<table>
+    <tr>
+        <td>Номер</td>
+        <td>Название</td>
+        <td>Адрес</td>
+        <td></td>
+    </tr>
+    @foreach (var vehiclesCompany in Model){
         <tr>
-            <td>Номер</td>
-            <td>Название</td>
-            <td>Адрес</td>
-            <td></td>
+            <td>@vehiclesCompany.Id</td>
+            <td>@vehiclesCompany.Name</td>
+            <td>@vehiclesCompany.Address</td>
+            <td><a href="~/Home/OrdersIndex/@vehiclesCompany.Id">Посмотреть заказы</a></td>
         </tr>
-        @foreach (var vehiclesCompany in Model)
-            {
-            <tr>
-                <td>@vehiclesCompany.Id</td>
-                <td>@vehiclesCompany.Name</td>
-                <td>@vehiclesCompany.Address</td>
-                <td><a href="~/Home/OrdersIndex/@vehiclesCompany.Id">Посмотреть заказы</a></td>
-            </tr>
-        }
-        <tr><td><a href="~/Home/vehiclesindex">Автопарк</a></td></tr>
-    </table>
-</body>
-</html>
+    }
+    <tr><td><a href="~/Home/vehiclesindex">Автопарк</a></td></tr>
+</table>

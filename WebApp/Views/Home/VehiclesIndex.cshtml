@@ -1,16 +1,9 @@
-﻿@using ModelsClassLibrary.Entitys
-@using WebApp.ViewModel
-
-@model CompanysWithVehicles
-@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model CompanysWithVehicles
 
 <form>
     <label>Выберите компанию:</label>
     <select name="id" class="form-control">
-        @foreach (VehiclesCompany comp in Model.VehiclesCompanies)
-        {
+        @foreach (VehiclesCompany comp in Model.VehiclesCompanies){
             <option value="@comp.Id">@comp.Name</option>
         }
     </select>
@@ -24,8 +17,7 @@
         <td>Название компании</td>
         <td>Пробег</td>
     </tr>
-    @foreach (Vehicle vehicle in Model.Vehicles)
-    {
+    @foreach (Vehicle vehicle in Model.Vehicles){
         <tr>
             <td align="center">@vehicle.Brand</td>
             <td align="center">@vehicle.VehiclesCompany?.Name</td>

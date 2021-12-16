@@ -9,3 +9,4 @@ C:\Users\Valerik\source\repos\MyGazpromTask\ModelsClassLibrary\obj\Debug\net5.0\
 C:\Users\Valerik\source\repos\MyGazpromTask\ModelsClassLibrary\obj\Debug\net5.0\ModelsClassLibrary.dll
 C:\Users\Valerik\source\repos\MyGazpromTask\ModelsClassLibrary\obj\Debug\net5.0\ref\ModelsClassLibrary.dll
 C:\Users\Valerik\source\repos\MyGazpromTask\ModelsClassLibrary\obj\Debug\net5.0\ModelsClassLibrary.pdb
+C:\Users\Valerik\source\repos\MyGazpromTask\ModelsClassLibrary\obj\Debug\net5.0\ModelsClassLibrary.csprojAssemblyReference.cache
